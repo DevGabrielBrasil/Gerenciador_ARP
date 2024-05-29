@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Find-ARP</title>
+</head>
+<body>
+  <form class="formulario">
+    <label for="nome_produto">Nome do produto:</label>
+    <input type="text" id="nome_produto" name="nome_produto" placeholder="Item da ARP"><br><br>
+
+    <label for="data_validade">Criação da Ata:</label>
+    <input type="date" id="data_validade" name="data_validade" required><br><br>
+
+    <label for="data_limite">Vencimento da Ata:</label>
+    <input type="date" id="data_limite" name="data_limite" readonly><br><br>
+
+    <label for="responsavel">Responsável:</label>
+    <select id="responsavel" name="responsavel" required>
+      <option value="" disabled selected>Escolha um Responsável</option>
+      <option value="pessoa1">Felipe Moraes</option>
+      <option value="pessoa2">Crislaine Moraes</option>
+      <option value="pessoa3">Felipe Maidana</option>
+    </select><br><br>
+
+    <label for="foto_produto">Foto do produto:</label>
+    <input type="file" id="foto_produto" name="foto_produto" required><br><br>
+
+    <label for="arquivo">Local para inserir o arquivo da Ata:</label>
+    <input type="file" id="arquivo" name="arquivo" required><br><br>
+
+    <input class="botao" type="submit" value="Enviar">
+  </form>
+
+  <script src="index.js"></script> </body>
+</html>
