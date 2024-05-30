@@ -1,25 +1,21 @@
 <?php
-    if(isset($POST['Cadastrar'])){
-        $nome = $_POST['nome_produto'];
-        $datafim =$_POST['criacao_da_ata'];
-        $vencimento =$_POST['vencimento_ata'];
-        $responsavel =$_POST['responsavel'];
-        $foto =$_POST['foto_produto'];
-        $arquivo =$_POST['arquivo'];
-    }
-    $host = "localhost";
-    $banco = "cadastro_arp";
-    $user = "root";
-    $senha_user = "";
 
-    $con = mysqli_connect($host,$user,$senha_user,$banco);
+// Database connection parameters
+$dbHost = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
+$dbName = "cadastro_arp";
 
-    $sql = "INSERT INTO arp(produto,criacao_ata,vencimento_ata,responsavel,foto_produto,arquivo) VALUES('$nome','$datafim','$vencimento','$responsavel','$foto',' $arquivo' )";
+// Create connection
+$mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-    $rs = mysqli_query($con, $sql);
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
 
-    if($rs){
-        echo "Você cadastrou uma nova ARP";
-    }
+echo "Connected successfully to MySQL database";
 
+// Close connection (when no longer needed)
+$mysqli->close();
 ?>
