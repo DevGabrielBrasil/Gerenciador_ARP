@@ -7,15 +7,16 @@
   <title>Find-ARP</title>
 </head>
 <body>
+  <form action="config.php" method="POST">
   <form class="formulario">
     <label for="nome_produto">Nome do produto:</label>
     <input type="text" id="nome_produto" name="nome_produto" placeholder="Item da ARP"><br><br>
 
-    <label for="data_validade">Criação da Ata:</label>
-    <input type="date" id="data_validade" name="data_validade" required><br><br>
+    <label for="criacao_da_ata">Criação da Ata:</label>
+    <input type="date" id="criacao_da_ata" name="criacao_da_ata" required><br><br>
 
-    <label for="data_limite">Vencimento da Ata:</label>
-    <input type="date" id="data_limite" name="data_limite" readonly><br><br>
+    <label for="vencimento_ata">Vencimento da Ata:</label>
+    <input type="date" id="vencimento_ata" name="vencimento_ata" readonly><br><br>
 
     <label for="responsavel">Responsável:</label>
     <select id="responsavel" name="responsavel" required>
@@ -31,8 +32,9 @@
     <label for="arquivo">Local para inserir o arquivo da Ata:</label>
     <input type="file" id="arquivo" name="arquivo" required><br><br>
 
-    <input class="botao" type="submit" value="Enviar">
+    <input class="botao" name="Cadastrar" type="submit" value="Cadastrar">
   </form>
+</form>
 
   <script src="index.js"></script> </body>
 </html>
